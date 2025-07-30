@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import GallerySection from '@/components/GallerySection';
+import BlogSection from '@/components/BlogSection';
+import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <HeroSection />
+      <AboutSection />
+      <GallerySection />
+      <BlogSection />
+      <ContactSection />
+      
+      {/* Footer */}
+      <footer className="bg-muted/50 py-12 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="font-display font-bold text-2xl mb-4">The Big Beat</div>
+          <p className="text-muted-foreground mb-6">
+            Capturing life through the lens, the road, and the journey
+          </p>
+          <p className="text-sm text-muted-foreground">
+            © 2024 The Big Beat. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
