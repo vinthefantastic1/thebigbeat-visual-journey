@@ -1,8 +1,6 @@
 import { Card } from '@/components/ui/card';
-
 const AboutSection = () => {
-  return (
-    <section className="py-20 px-4 max-w-6xl mx-auto" id="about">
+  return <section className="py-20 px-4 max-w-6xl mx-auto" id="about">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Profile Image */}
         <div className="relative">
@@ -56,8 +54,8 @@ const AboutSection = () => {
               <div className="text-sm text-muted-foreground">Photos Captured</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">25+</div>
-              <div className="text-sm text-muted-foreground">Countries Visited</div>
+              <div className="text-3xl font-bold text-primary">39+</div>
+              <div className="text-sm text-muted-foreground">Countries/Regions Visited</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">50+</div>
@@ -66,8 +64,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
