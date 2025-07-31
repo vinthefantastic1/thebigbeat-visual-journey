@@ -6,6 +6,13 @@ import heroImage from '@/assets/hero-image.jpg';
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
 
+    const scrollToGallery = () => {
+    const gallerySection = document.getElementById('gallery');
+    if (gallerySection) {
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
@@ -63,6 +70,8 @@ const HeroSection = () => {
               variant="default" 
               size="lg" 
               className="bg-primary hover:bg-primary-glow shadow-glow transition-smooth text-lg px-8 py-3"
+               onClick={scrollToGallery}
+               
             >
               Explore Gallery
             </Button>

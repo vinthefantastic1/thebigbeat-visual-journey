@@ -71,7 +71,7 @@ const GallerySection = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
+                  className="w-full h-full object-contain group-hover:scale-110 transition-smooth"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-smooth" />
                 <div className="absolute top-4 left-4">
