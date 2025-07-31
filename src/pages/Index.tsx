@@ -4,10 +4,8 @@ import AboutSection from '@/components/AboutSection';
 import GallerySection from '@/components/GallerySection';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <HeroSection />
       <AboutSection />
@@ -22,13 +20,9 @@ const Index = () => {
           <p className="text-muted-foreground mb-6">
             Capturing life through the lens, the road, and the journey
           </p>
-          <p className="text-sm text-muted-foreground">
-            © 2024 The Big Beat. All rights reserved.
-          </p>
+          <p className="text-sm text-muted-foreground">© 2025 The Big Beat. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
