@@ -18,7 +18,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-muted/50 py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="font-display font-bold text-2xl mb-4">The Big Beat</div>
+          <div className="font-display font-bold text-2xl mb-4 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">The Big Beat</div>
           <p className="text-muted-foreground mb-6">
             Capturing life through the lens, the road, and the journey
           </p>

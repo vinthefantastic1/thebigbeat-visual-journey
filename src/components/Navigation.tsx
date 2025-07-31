@@ -43,7 +43,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div 
-            className="font-display font-bold text-xl cursor-pointer hover:text-primary transition-smooth"
+            className="font-display font-bold text-xl cursor-pointer hover:text-primary transition-smooth bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             The Big Beat

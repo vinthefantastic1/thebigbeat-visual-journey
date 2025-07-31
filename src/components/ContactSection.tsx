@@ -57,20 +57,19 @@ const ContactSection = () => {
         <Card className="p-8 bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-left">
-              <h3 className="text-2xl font-bold mb-2">Ready for an Adventure?</h3>
+              <h3 className="text-2xl font-bold mb-2">Let's Connect</h3>
               <p className="text-muted-foreground">
-                Let's create something amazing together. Whether it's a photo shoot, 
-                travel collaboration, or automotive feature.
+                Follow my journey through photography, travel adventures, and automotive passion.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="default" size="lg" className="shadow-glow">
                 <Camera className="w-4 h-4 mr-2" />
-                Book a Shoot
+                View Gallery
               </Button>
               <Button variant="outline" size="lg">
                 <MapPin className="w-4 h-4 mr-2" />
-                Plan a Trip
+                Follow Journey
               </Button>
             </div>
           </div>
