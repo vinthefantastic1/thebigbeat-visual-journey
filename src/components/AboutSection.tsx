@@ -20,7 +20,7 @@ const AboutSection = () => {
         <div className="space-y-6">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-4 text-foreground">
-              Behind the Lens
+              About Me
             </h2>
             <div className="w-20 h-1 bg-primary rounded-full mb-6"></div>
           </div>
