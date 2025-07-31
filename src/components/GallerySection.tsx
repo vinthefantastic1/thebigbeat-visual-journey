@@ -6,45 +6,45 @@ const GallerySection = () => {
   const galleryItems = [
     {
       id: 1,
-      title: "Mountain Road Photography",
+      title: "Alaska Mountains",
       category: "Travel",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e426?w=800&h=600&fit=crop",
-      description: "Capturing the essence of winding mountain roads at golden hour"
+      image: "images/gallery/mountains_alaska_7e7636dab3464c397ede6be2ab592f0c1.jpg",
+      description: "Capturing the majestic beauty of the Alaskan wilderness"
     },
     {
       id: 2,
-      title: "Classic Car Portrait",
+      title: "BMW i5",
       category: "Automotive",
-      image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop",
-      description: "Vintage automotive beauty meets modern photography techniques"
+      image: "images/gallery/bmw_amcc9ddc83966ccfd056ff33ba94bb5ae601.jpg",
+      description: "Automotive beauty"
     },
     {
       id: 3,
-      title: "Desert Landscapes",
+      title: "Antarctica",
       category: "Travel",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800&h=600&fit=crop",
-      description: "The raw beauty of desert terrain and endless horizons"
+      image: "images/gallery/antartica_IMG_8133.jpg",
+      description: "Penguins in Antarctica, a glimpse into the icy wilderness"
     },
     {
       id: 4,
-      title: "Urban Car Culture",
+      title: "Classic International Scout",
       category: "Automotive",
-      image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop",
-      description: "Street photography meets automotive passion in the city"
+      image: "images/gallery/international_scout_bf509b6322ee80c3ff0b622f751379901.jpg",
+      description: "A tribute to vintage off-road vehicles and their timeless appeal"
     },
     {
       id: 5,
-      title: "Coastal Adventures",
-      category: "Travel",
-      image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&h=600&fit=crop",
-      description: "Where the ocean meets the open road - coastal photography"
+      title: "Classic Ford Bronco",
+      category: "Automotive",
+      image: "images/gallery/Bronco_sc754c3b6f00fd8c215d027d366009ea9e1.jpg",
+      description: "Exploring the rugged beauty of classic off-road vehicles"
     },
     {
       id: 6,
-      title: "Racing Heritage",
+      title: "Classic VW Bus",
       category: "Automotive",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-      description: "Celebrating the history and culture of motorsport"
+      image: "images/gallery/vw_733c824cd0cf734b2f99412470eebb651.jpg",
+      description: "A nostalgic journey with the iconic VW Bus, perfect for road trips"
     }
   ];
 
