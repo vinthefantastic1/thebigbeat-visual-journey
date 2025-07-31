@@ -27,8 +27,6 @@ const Navigation = () => {
   const menuItems = [
     { label: 'About', id: 'about' },
     { label: 'Gallery', id: 'gallery' },
-    { label: 'Blog', id: 'blog' },
-    { label: 'Contact', id: 'contact' },
   ];
 
   return (
