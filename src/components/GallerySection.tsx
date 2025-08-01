@@ -1,5 +1,6 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { ExternalLink } from 'lucide-react';
 
 const GallerySection = () => {
@@ -62,32 +63,48 @@ const GallerySection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {galleryItems.map((item, index) => (
-            <Card 
-              key={item.id} 
-              className="overflow-hidden group hover:shadow-card transition-smooth cursor-pointer"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="relative overflow-hidden aspect-[4/3]">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-contain group-hover:scale-110 transition-smooth"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-smooth" />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full">
-                    {item.category}
-                  </span>
+            <Dialog key={item.id}>
+              <DialogTrigger asChild>
+                <Card 
+                  className="overflow-hidden group hover:shadow-card transition-smooth cursor-pointer"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="relative overflow-hidden aspect-[4/3]">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-contain group-hover:scale-110 transition-smooth"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-smooth" />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full">
+                        {item.category}
+                      </span>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
+                      <ExternalLink className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm">{item.description}</p>
+                  </div>
+                </Card>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl max-h-[90vh] p-2">
+                <div className="flex flex-col items-center">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="max-w-full max-h-[80vh] object-contain"
+                  />
+                  <div className="mt-4 text-center">
+                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </div>
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                  <ExternalLink className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.description}</p>
-              </div>
-            </Card>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
 
