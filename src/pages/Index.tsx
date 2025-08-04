@@ -20,7 +20,12 @@ const Index = () => {
           <p className="text-muted-foreground mb-6">
             Capturing life through the lens, the road, and the journey
           </p>
-          <p className="text-sm text-muted-foreground">© 2025 The Big Beat. All rights reserved.</p>
+          <div className="text-sm text-muted-foreground">
+            <p>© 2025 The Big Beat. All rights reserved.</p>
+            <p className="mt-2 text-xs opacity-70">
+              Version {__APP_VERSION__} | Built on {new Date(__BUILD_DATE__).toLocaleDateString()}
+            </p>
+          </div>
         </div>
       </footer>
     </div>;
