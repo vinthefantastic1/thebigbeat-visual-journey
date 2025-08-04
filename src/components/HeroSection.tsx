@@ -39,11 +39,13 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <div className="animate-fade-in">
-          <div className="relative">
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight bg-gradient-to-r from-white via-primary-glow to-white bg-clip-text text-transparent animate-glow-pulse">
-              The Big Beat
-            </h1>
-            <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-primary-glow/30 to-primary/20 blur-xl opacity-30 animate-pulse" />
+          <div className="relative flex justify-center mb-6">
+            <img 
+              src="/images/gallery/thebigbeatlogo.png" 
+              alt="The Big Beat Logo" 
+              className="h-40 md:h-60 lg:h-80 xl:h-96 w-auto object-contain filter drop-shadow-2xl animate-glow-pulse"
+            />
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-primary-glow/30 to-primary/20 blur-xl opacity-30 animate-pulse" />
           </div>
           <p className="text-xl md:text-2xl lg:text-3xl font-light mb-8 text-gray-200 max-w-3xl mx-auto">
             Capturing life through the lens, the road, and the journey
