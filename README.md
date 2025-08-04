@@ -1,73 +1,90 @@
-# Welcome to your Lovable project
+# Deploying to GitHub Pages (Vite + Loveable)
 
-## Project info
+## 1. Build Your Project
 
-**URL**: https://lovable.dev/projects/1b3b9634-d465-49d5-8d48-1cb20fff1bfa
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/1b3b9634-d465-49d5-8d48-1cb20fff1bfa) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Clone your repo and install dependencies:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+npm run build
 ```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
 
-**Use GitHub Codespaces**
+    npm run build:patch  # Bumps version and builds
+    git add .
+    git commit -m "Version bump and build"
+    git push 
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+    # Regular build (keeps current version)
+    npm run build
 
-## What technologies are used for this project?
+    # Build with automatic patch version bump (1.0.0 → 1.0.1)
+    npm run build:patch
 
-This project is built with:
+    # Build with minor version bump (1.0.0 → 1.1.0)  
+    npm run build:minor
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+    # Build with major version bump (1.0.0 → 2.0.0)
+    npm run build:major
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/1b3b9634-d465-49d5-8d48-1cb20fff1bfa) and click on Share -> Publish.
+```
+This generates a `dist` folder containing your production-ready static files.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 2. Deploy the `dist` Folder to GitHub Pages
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+#### FORGET THE GITHUB STUFF. We're using NETLIFY instead
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Option A: Using the `gh-pages` Branch (Recommended for Vite)
+
+1. **Install the `gh-pages` package:**
+
+    ```sh
+    npm install --save-dev gh-pages
+    ```
+
+<!-- 2. **Update your `package.json`:**
+
+    ```json
+    "homepage": "https://vinthfantastic1.github.io/thebigbeat-visual-journey/",
+    "scripts": {
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d dist"
+    }
+    ``` -->
+
+3. **Update BrowserRouter `basename`:**
+
+    In your `src/App.tsx`, set:
+
+    ```tsx
+    <BrowserRouter basename="/thebigbeat-visual-journey">
+    ```
+
+4. **Update your Vite config (`vite.config.ts`):**
+
+    ```ts
+    export default defineConfig({
+      base: '/thebigbeat-visual-journey/',
+      // ...other config
+    })
+    ```
+
+5. **Deploy:**
+
+    ```sh
+    npm run deploy
+    ```
+
+Your site will now be live at  
+`https://vinthefantastic1.github.io/thebigbeat-visual-journey/`
+
+---
+
+**Note:**  
+Setting the correct `base` in your Vite config is crucial. Without it, your site’s JS and CSS won’t load properly on GitHub Pages.
+
